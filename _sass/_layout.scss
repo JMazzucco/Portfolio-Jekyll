@@ -2,6 +2,8 @@
  * Site header
  */
 .site-header {
+
+    @include outer-container;
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
@@ -11,6 +13,8 @@
 }
 
 .site-title {
+    @include span-columns(3);
+    @include shift(2);
     font-size: 26px;
     font-weight: 300;
     line-height: 56px;
@@ -25,6 +29,7 @@
 }
 
 .site-nav {
+    @include span-columns(4);
     float: right;
     line-height: 56px;
 
