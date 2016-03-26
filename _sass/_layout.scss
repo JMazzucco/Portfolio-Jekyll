@@ -3,34 +3,60 @@
  */
 .site-header {
     @include outer-container;
-    border-top: 5px solid $grey-color-dark;
+    border-top: 1px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
+    padding-top: 30px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
+
+
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 20px;
+    background: grey;
+    transform: rotate(45deg);
 }
 
 .site-title {
-    @include span-columns(3);
-    @include shift(2);
+    @include span-columns(4);
+    @include shift(1);
     font-size: 26px;
     font-weight: 300;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    display: flex;
+    align-items: center;
 
     &,
     &:visited {
         color: $grey-color-dark;
     }
+
+    span {
+        display: inline-block;
+    }
 }
 
 .site-nav {
     @include span-columns(4);
+        @include shift(3);
     float: right;
     line-height: 56px;
+
 
     .menu-icon {
         display: none;
@@ -226,9 +252,6 @@
 }
 
 .post-title {
-
-    // @include span-columns(3);
-    //     @include shift(2);
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
@@ -239,9 +262,6 @@
 }
 
 .post-content {
-
-        // @include span-columns(3);
-        // @include shift(2);
     margin-bottom: $spacing-unit;
 
     h2 {
