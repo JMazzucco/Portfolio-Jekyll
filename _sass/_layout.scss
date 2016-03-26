@@ -10,8 +10,6 @@
 
     // Positioning context for the mobile navigation icon
     position: relative;
-
-
 }
 
 .header-container {
@@ -30,7 +28,7 @@
 }
 
 .site-title {
-    @include span-columns(4);
+    @include span-columns(6);
     @include shift(1);
     font-size: 26px;
     font-weight: 300;
@@ -48,12 +46,16 @@
 
     span {
         display: inline-block;
+
+        @include media-query($on-palm) {
+          display: none;
+        }
     }
 }
 
 .site-nav {
     @include span-columns(4);
-        @include shift(3);
+    @include shift(1);
     float: right;
     line-height: 56px;
 
@@ -123,40 +125,37 @@
 }
 
 
-
 /**
  * Site footer
  */
 .site-footer {
-    @include outer-container;
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
-}
-
-.footer-heading {
-    @include span-columns(3);
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
 }
 
 .contact-list,
 .social-media-list {
     list-style: none;
     margin-left: 0;
+
+    li {
+      display: inline-block;
+      margin: 10px;
+    }
+
 }
 
-.footer-col-wrapper {
+.footer-container {
+    @include outer-container;
     font-size: 15px;
     color: $grey-color;
-    margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }
 
 .footer-col {
-    @include span-columns(2);
+    @include span-columns(3);
+    @include shift(8);
     float: left;
-    // margin-bottom: $spacing-unit / 2;
-    // padding-left: $spacing-unit / 2;
 }
 
 // .footer-col-1 {
@@ -201,8 +200,10 @@
  * Page content
  */
 .page-content {
+
     @include outer-container;
     padding: $spacing-unit 0;
+
 }
 
 .home {
