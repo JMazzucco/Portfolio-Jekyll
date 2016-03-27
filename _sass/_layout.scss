@@ -27,10 +27,8 @@
     transform: rotate(45deg);
 }
 
-
-
 .site-title {
-    @include span-columns(6);
+    @include span-columns(5);
     @include shift(1);
     font-size: 26px;
     font-weight: 300;
@@ -58,9 +56,10 @@
 
 .site-nav {
     @include span-columns(4);
-    @include shift(1);
+    // @include shift(1);
     float: right;
     line-height: 56px;
+    text-align: right;
 
 
     .menu-icon {
@@ -143,7 +142,7 @@
 
     li {
       display: inline-block;
-      margin: 10px;
+      margin-left: 15px;
     }
 
 }
@@ -158,7 +157,9 @@
 
 @include direction-context(right-to-left) {
   .footer-col {
-    @include span-columns(3);
+    @include span-columns(8);
+    @include shift(2);
+    text-align: right;
   }
 
 }
