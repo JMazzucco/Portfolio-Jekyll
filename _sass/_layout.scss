@@ -32,7 +32,6 @@
     font-size: 26px;
     font-weight: 300;
     line-height: 56px;
-    letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
     display: flex;
@@ -216,8 +215,6 @@
 
   .work-inner {
     width: 100%;
-    height: 500px;
-    background: red;
     font-size: 0;
     text-align: center;
   }
@@ -226,12 +223,9 @@
 .work-piece {
   display: inline-block;
   margin: auto;
-  height: 250px;
   @include calc(width, "100% / 3");
   overflow:hidden;
   background: grey;
-
-
 }
 
 .page-heading {
