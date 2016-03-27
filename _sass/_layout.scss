@@ -28,7 +28,7 @@
 }
 
 .site-title {
-    @include span-columns(5);
+    @include span-columns(6);
     @include shift(1);
     font-size: 26px;
     font-weight: 300;
@@ -56,7 +56,6 @@
 
 .site-nav {
     @include span-columns(4);
-    // @include shift(1);
     float: right;
     line-height: 56px;
     text-align: right;
@@ -158,7 +157,7 @@
 @include direction-context(right-to-left) {
   .footer-col {
     @include span-columns(8);
-    @include shift(2);
+    @include shift(1);
     text-align: right;
   }
 
@@ -205,14 +204,36 @@
  * Page content
  */
 .page-content {
-
     @include outer-container;
     padding: $spacing-unit 0;
-
 }
 
 .home {
     @include outer-container;
+}
+
+.work-container {
+  @include span-columns(10);
+  @include shift(1);
+
+  .work-inner {
+    width: 100%;
+    height: 500px;
+    background: red;
+    font-size: 0;
+    text-align: center;
+  }
+}
+
+.work-piece {
+  display: inline-block;
+  margin: auto;
+  height: 250px;
+  @include calc(width, "100% / 3");
+  overflow:hidden;
+  background: grey;
+
+
 }
 
 .page-heading {
