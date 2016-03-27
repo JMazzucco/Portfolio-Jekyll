@@ -27,6 +27,8 @@
     transform: rotate(45deg);
 }
 
+
+
 .site-title {
     @include span-columns(6);
     @include shift(1);
@@ -52,6 +54,7 @@
         }
     }
 }
+
 
 .site-nav {
     @include span-columns(4);
@@ -152,12 +155,13 @@
     @extend %clearfix;
 }
 
-.footer-col {
-    @include span-columns(3);
-    @include shift(8);
-    float: left;
-}
 
+@include direction-context(right-to-left) {
+  .footer-col {
+    @include span-columns(3);
+  }
+
+}
 // .footer-col-1 {
 //     width: -webkit-calc(35% - (#{$spacing-unit} / 2));
 //     width:         calc(35% - (#{$spacing-unit} / 2));
