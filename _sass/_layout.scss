@@ -27,7 +27,7 @@
 }
 
 .site-title {
-    @include span-columns(6);
+    @include span-columns(5);
     @include shift(1);
     font-size: 26px;
     font-weight: 300;
@@ -45,6 +45,10 @@
     span {
         display: inline-block;
 
+        @include media-query($on-tablet) {
+          font-size: 0.6em
+        }
+
         @include media-query($on-palm) {
           display: none;
         }
@@ -53,7 +57,8 @@
 
 
 .site-nav {
-    @include span-columns(4);
+    @include span-columns(5);
+        // @include shift(1);
     float: right;
     line-height: 56px;
     text-align: right;
@@ -214,7 +219,6 @@
   @include shift(1);
 
   .work-inner {
-    width: 100%;
     font-size: 0;
     text-align: center;
   }
@@ -224,8 +228,23 @@
   display: inline-block;
   margin: auto;
   @include calc(width, "100% / 3");
-  overflow:hidden;
+  overflow: hidden;
   background: grey;
+
+  img {
+    min-width: 100%;
+  }
+
+  @include media-query($on-tablet) {
+    width: 50%;
+  }
+
+  @include media-query($on-palm) {
+    max-width: 300px;
+    width: 100%;
+  }
+
+
 }
 
 .page-heading {
