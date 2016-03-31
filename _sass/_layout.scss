@@ -144,7 +144,13 @@
     li {
       display: inline-block;
       margin-left: 15px;
+
+      @include media-query($on-palm) {
+        margin: 5px;
+      }
     }
+
+
 
 }
 
