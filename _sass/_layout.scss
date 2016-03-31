@@ -271,6 +271,11 @@
  */
 
 
+.post {
+      @include span-columns(10);
+    @include shift(1);
+}
+
 .post-header {
     margin-bottom: $spacing-unit;
 }
