@@ -9,21 +9,16 @@
 
     // Positioning context for the mobile navigation icon
     position: relative;
+
+    @include media-query($on-palm) {
+      padding-top: 15px;
+    }
+
 }
 
 .header-container {
     display: flex;
     align-items: center;
-}
-
-#logo {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    margin: 20px;
-    background: grey;
-    transform: rotate(45deg);
 }
 
 .site-title {
@@ -56,9 +51,28 @@
 }
 
 
+#logo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 20px;
+    background: grey;
+    transform: rotate(45deg);
+
+
+    @include media-query($on-palm) {
+      width: 25px;
+      height: 25px;
+      margin: 0;
+
+    }
+
+}
+
+
 .site-nav {
     @include span-columns(5);
-        // @include shift(1);
     float: right;
     line-height: 56px;
     text-align: right;
@@ -149,8 +163,6 @@
         margin: 5px;
       }
     }
-
-
 
 }
 
