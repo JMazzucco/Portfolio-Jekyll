@@ -1,14 +1,46 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "SeatYourself App"
 date:   2016-03-02 11:57:20 -0500
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+### Overview ###
+___
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae nisi fermentum, accumsan nisl et, dapibus magna. Nullam diam mauris, gravida sed augue a, pellentesque rutrum diam. Nam tincidunt iaculis lacus, vel placerat nibh dignissim ut. Sed eu lacus tincidunt, lacinia felis id, viverra nisl. Suspendisse et massa vel dui luctus dictum sed eget neque. Proin eu dolor gravida ipsum facilisis iaculis sed ut ex. Nam volutpat finibus risus mollis porta.
 
-Jekyll also offers powerful support for code snippets:
+<a href="#" target="_blank">Site</a>&nbsp;
+<a href="#" target="_blank">Repo</a>
+
+<div style="margin: 20px 0">
+    <img style="display: inline-block; width: 66.25%; height: auto; margin-right: 0.5%;" src="https://www.fillmurray.com/600/300"/>
+    <img style="display: inline-block; width: 33.25%; height: auto; margin-left: -5px;" src="https://www.fillmurray.com/300/300"/>
+</div>
+
+<br/>
+
+### Goal ###
+___
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae nisi fermentum, accumsan nisl et, dapibus magna. Nullam diam mauris, gravida sed augue a, pellentesque rutrum diam.
+
+### Planning ###
+___
+info gathering . requirements
+
+### Design ###
+___
+Wireframes . Mockups
+<div style="margin: 20px 0">
+    <img style="display: inline-block; width: 49.75%; height: auto; margin-right: 0.5%;" src=" http://placehold.it/450x300"/>
+    <img style="display: inline-block; width: 49.75%; height: auto; margin-left: -5px;" src=" http://placehold.it/450x300"/>
+</div>
+
+
+
+
+### Development  ###
+___
+Technology Used . Testing
 
 {% highlight ruby %}
 def print_hi(name)
@@ -18,8 +50,15 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+### What I Learned ###
+___
+Challenges and how I overcame them
+What skills did I stengthen?
+What could I have done more effeciently
+How can apply all of this to my next project?
+
 
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
+
