@@ -153,6 +153,16 @@
     list-style: none;
     margin-left: 0;
 
+
+    a {
+        color: inherit;
+    }
+
+    .fa {
+        font-size: 1.5em;
+    }
+
+
     li {
       display: inline-block;
       margin-left: 15px;
