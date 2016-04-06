@@ -2,8 +2,6 @@
  * Site header
  */
 .site-header {
-    @include outer-container;
-
     min-height: 56px;
     padding-top: 30px;
 
@@ -19,47 +17,31 @@
 .header-container {
     display: flex;
     align-items: center;
+    @include outer-container;
 }
 
-
-
 .site-logo {
-    @include span-columns(5);
+    @include span-columns(2);
     @include shift(1);
-    width: 100px;
-    height: 100px;
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 56px;
-    margin-bottom: 0;
-    float: left;
-    display: flex;
-    align-items: center;
 
+    img {
+        width: 70%;
+    }
 
     &,
     &:visited {
         color: $grey-color-dark;
     }
 
-    span {
-        display: inline-block;
 
-        @include media-query($on-tablet) {
-          font-size: 0.6em
-        }
-
-        @include media-query($on-palm) {
-          display: none;
-        }
-    }
 }
 
 
 
 
 .site-nav {
-    @include span-columns(5);
+    @include span-columns(4);
+    @include shift(4);
     float: right;
     line-height: 56px;
     text-align: right;
@@ -332,3 +314,5 @@
     }
 
 }
+
+
