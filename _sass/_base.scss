@@ -1,9 +1,6 @@
 @import "bourbon/bourbon";
-$visual-grid: true;
+// $visual-grid: true;
 @import "neat/neat";
-// @import "font-awesome-compass";
-// @import "font-awesome-sprockets";
-// @import "font-awesome";
 
 /**
  * Reset some basic elements
@@ -15,10 +12,12 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
  * Basic styling
  */
 body {
-    background: #eff2f5;
+    background: linear-gradient(215deg, #fff 60%, rgba(242,246,248,0.6) 40%);
+    height: 100vh;
+
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
-    background-color: $background-color;
+    // background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;

@@ -343,3 +343,33 @@
         outline: 0;
     }
 }
+
+
+#test-logo {
+    width: 100px;
+    height: 100px;
+    background: grey;
+}
+
+#test-logo #circle {
+    width: 100%;
+    height: 100%;
+    /*border-radius: 100%;*/
+    background: white;
+}
+
+#test-logo #circle #left-box {
+        width: 100%;
+    height: 100%;
+    border-radius: 100% 0 0 100%;
+    display: inline-block;
+    width: 49%;
+    background: blue;
+}
+
+#test-logo #circle #right-box {
+    display: inline-block;
+    width: 49%;
+    background: red;
+
+}
