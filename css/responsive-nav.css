@@ -36,14 +36,28 @@
   user-select: none;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 800px) {
   .js .nav-collapse {
+    display: flex;
     position: relative;
+    height: 100%;
+    align-items: center;
   }
+
   .js .nav-collapse.closed {
     max-height: none;
   }
+
   .nav-toggle {
     display: none;
+  }
+
+  .nav-collapse ul {
+    display: flex;
+    text-align: right;
+  }
+
+  .nav-collapse li {
+    display: inline;
   }
 }

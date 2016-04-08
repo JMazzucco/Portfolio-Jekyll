@@ -2,15 +2,15 @@
  * Site header
  */
 .site-header {
-    min-height: 56px;
-    padding-top: 30px;
+    // min-height: 56px;
+    @include outer-container;
 
     // Positioning context for the mobile navigation icon
     position: relative;
-
-    @include media-query($on-palm) {
-      padding-top: 15px;
-    }
+    height: 125px;
+    // @include media-query($on-palm) {
+      // padding-top: 15px;
+    // }
 
 }
 
@@ -104,23 +104,40 @@
     }
 }
 
-nav {
-    width: 100%;
-    background: grey;
-}
-
-nav li {
-    text-align: center;
-
-}
 
 @include direction-context(right-to-left) {
+    body {
+        // background: blue;
+    }
+
+    nav {
+        @include span-columns(5);
+        @include shift(1);
+
+        .menu-item {
+
+            display: inline;
+        }
+    }
+
+
+    @include media-query($on-tablet) {
+        body {background: red;}
+
+        nav {
+            @include span-columns(12);
+            @include shift(0);
+            text-align: center;
+        }
+    }
+
     .nav-toggle {
         @include span-columns(4);
         @include shift(1);
         text-align: right;
     }
 }
+
 /**
  * Site footer
  */
