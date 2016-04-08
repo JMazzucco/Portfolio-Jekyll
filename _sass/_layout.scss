@@ -104,7 +104,23 @@
     }
 }
 
+nav {
+    width: 100%;
+    background: grey;
+}
 
+nav li {
+    text-align: center;
+
+}
+
+@include direction-context(right-to-left) {
+    .nav-toggle {
+        @include span-columns(4);
+        @include shift(1);
+        text-align: right;
+    }
+}
 /**
  * Site footer
  */
