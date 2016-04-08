@@ -16,6 +16,7 @@
 .js .nav-collapse {
   clip: rect(0 0 0 0);
   max-height: 0;
+  background-color: white;
   position: absolute;
   display: block;
   overflow: hidden;
@@ -36,7 +37,7 @@
   user-select: none;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 801px) {
   .js .nav-collapse {
     display: flex;
     position: relative;
@@ -55,6 +56,7 @@
   .nav-collapse ul {
     display: flex;
     text-align: right;
+    margin-top: 9%;
   }
 
   .nav-collapse li {

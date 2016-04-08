@@ -2,16 +2,11 @@
  * Site header
  */
 .site-header {
-    // min-height: 56px;
     @include outer-container;
-
+    background: grey;
+    // height: 100px;
     // Positioning context for the mobile navigation icon
     position: relative;
-    height: 125px;
-    // @include media-query($on-palm) {
-      // padding-top: 15px;
-    // }
-
 }
 
 .header-container {
@@ -23,9 +18,11 @@
 .site-logo {
     @include span-columns(2);
     @include shift(1);
+    height: 100%;
 
     img {
         width: 70%;
+        height: 100%;
     }
 
     &,
@@ -106,9 +103,6 @@
 
 
 @include direction-context(right-to-left) {
-    body {
-        // background: blue;
-    }
 
     nav {
         @include span-columns(5);
@@ -122,7 +116,6 @@
 
 
     @include media-query($on-tablet) {
-        body {background: red;}
 
         nav {
             @include span-columns(12);
