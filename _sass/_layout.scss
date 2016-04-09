@@ -101,20 +101,17 @@
 
 
 @include direction-context(right-to-left) {
-
     nav {
-        @include span-columns(5);
+        @include span-columns(7);
         @include shift(1);
 
         .menu-item {
-
             display: inline;
         }
     }
 
 
     @include media-query($on-tablet) {
-
         nav {
             @include span-columns(12);
             @include shift(0);
