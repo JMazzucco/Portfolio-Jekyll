@@ -298,6 +298,7 @@
           removeClass(nav, "closed");
           addClass(nav, "opened");
           addClass(htmlEl, opts.navActiveClass);
+          addClass(navToggle, "is-active");
           addClass(navToggle, "active");
           nav.style.position = opts.openPos;
           setAttributes(nav, {"aria-hidden": "false"});
@@ -314,6 +315,7 @@
           addClass(nav, "closed");
           removeClass(nav, "opened");
           removeClass(htmlEl, opts.navActiveClass);
+          removeClass(navToggle, "is-active");
           removeClass(navToggle, "active");
           setAttributes(nav, {"aria-hidden": "true"});
 
@@ -467,10 +469,10 @@
         // If there's no toggle, let's create one
         if (!opts.customToggle) {
           var toggle = document.createElement("a");
-          toggle.innerHTML = opts.label;
+          toggle.innerHTML = "<span>toggle menu</span>";
           setAttributes(toggle, {
             "href": "#",
-            "class": "nav-toggle"
+            "class": "nav-toggle c-hamburger c-hamburger--htx"
           });
 
           // Determine where to insert the toggle
