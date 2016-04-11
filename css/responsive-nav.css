@@ -15,7 +15,11 @@
   text-align: left;
 }
 
-@media screen and (max-width: 800px) {
+.nav-collapse li a {
+  color: #333
+}
+
+@media screen and (max-width: 900px) {
   .nav-collapse li a {
     display: inline-block;
     font-weight: 400;
@@ -53,7 +57,7 @@
   user-select: none;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 901px) {
   .js .nav-collapse {
     display: flex;
     position: relative;
@@ -72,11 +76,33 @@
   .nav-collapse ul {
     text-align: right;
     margin-top: 12%;
-    background-color: inherit;;
+    background-color: inherit;
+    font-weight: 400;
+    font-size: 112.5%;
+    letter-spacing: 2px;
+    text-decoration: none;
+
   }
 
   .nav-collapse li {
     display: inline;
     margin-left: 30px;
   }
+
+  .nav-collapse li a{
+    text-decoration: none;
+    border-bottom: 2px solid rgba(51, 51, 51, 0);
+      transition: border-bottom 0.3s;
+
+  }
+
+
+  .nav-collapse li a:hover {
+     border-bottom: 2px solid rgba(51, 51, 51, 1);
+       -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  }
 }
+
+
