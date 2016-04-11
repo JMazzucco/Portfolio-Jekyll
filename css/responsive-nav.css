@@ -92,16 +92,13 @@
   .nav-collapse li a{
     text-decoration: none;
     border-bottom: 2px solid rgba(51, 51, 51, 0);
-      transition: border-bottom 0.3s;
+    transition: border-bottom 0.3s;
 
   }
 
 
   .nav-collapse li a:hover {
      border-bottom: 2px solid rgba(51, 51, 51, 1);
-       -webkit-opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
   }
 }
 
