@@ -1,3 +1,15 @@
 {
-  "generator-mocha": {}
+  "generator-backbone": {
+    "appPath": "app",
+    "appName": "Portfolio",
+    "testFramework": "mocha",
+    "templateFramework": "lodash",
+    "sassBootstrap": false,
+    "coffee": false,
+    "includeRequireJS": false
+  },
+  "generator-mocha": {
+    "ui": "tdd",
+    "rjs": false
+  }
 }
