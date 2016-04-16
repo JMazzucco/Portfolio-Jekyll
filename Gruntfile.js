@@ -280,6 +280,8 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'wiredep',
+      'sass',
       'createDefaultTemplate',
       'jst',
       'connect:livereload',
