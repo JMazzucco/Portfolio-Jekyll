@@ -32,6 +32,10 @@ module.exports = function (grunt) {
   grunt.initConfig({
     yeoman: yeomanConfig,
     watch: {
+      styles: {
+        files: ['<%= config.app %>/sass/{,*/}*.scss'],
+        tasks: ['sass', 'newer:copy:styles', 'autoprefixer']
+      },
       options: {
         nospawn: true,
         livereload: LIVERELOAD_PORT
