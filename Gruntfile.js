@@ -229,6 +229,24 @@ module.exports = function (grunt) {
         }
       }
     },
+    sass: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.app %>/sass',
+          src: ['*.scss'],
+          dest: '<%= config.app %>/styles',
+          ext: '.css'
+        }],
+
+        options: {
+          loadPath: [
+            'bower_components/bourbon/dist',
+            'bower_components/neat/app/assets/stylesheets'
+          ]
+        }
+      }
+    }
   });
 
   grunt.registerTask('createDefaultTemplate', function () {
