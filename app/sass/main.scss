@@ -1,3 +1,9 @@
+// In `app/sass/main.scss`
+@import 'bourbon';
+@import 'neat';
+
+// Other imports and styles go here
+
 body {
     background: #fafafa;
 }
