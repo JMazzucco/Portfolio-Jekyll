@@ -1,0 +1,56 @@
+Edit Edit Edit - your first copy will suck
+
+## HTML + CSS ##
+
+-Create basic layout of About page
+-Link front page images to posts
+	  -a new post should auto insert a new linked image, title and description at the top left corner of the front 	page.
+	  -
+-Create simple buttons for repo and site links.
+		- opaque body, 1px border that changes color on hover
+-Better font for menu items
+-font size, line height, letter spacing, etc - fine tuning sexiness
+-Menu item underlined when page is loaded
+
+## JS ##
+
+-spinner when loading the image
+-Fade in menu then site content like shown in Betakit site
+-navbar that hides/shows/opacity on scoll
+-menu dropdown for mobile. Rest of site darkens and disables
+-Animates menu items underlines on hover
+	-http://www.jqueryscript.net/animation/jQuery-Plugin-For-Subtle-HTML5-CSS3-Hover-Effects-captionHover-js.html
+	-On hover, show title and links to site, repo and case study
+-jquery effect when hovering over portfolio piece: show title and description
+-jquery fade in logo (maybe)
+-split up the logo in Illustrator. Fade in border and J separately on page load- spin the border?
+-Install SlickNav plugin for mobile menu - add a CSS animation: X to hamburger
+-Add a sub-menu to the posts. Menu lists each heading: Design, Dev, etc. Find a way to include this in mobile menu:
+	 About
+	 Resume
+	 Work
+
+	 probably not needed - the posts aren't too long.
+	-----------------------
+	 Case Study:
+	 Overview
+	 Desigm
+	 Dev
+	 What I learned
+ ^^ if the menu is this long, use the menu that slides in from the left and pushes page
+
+## General ##
+
+-Clean up and refactor code
+-Add bourbon, sass, neat variables and mixins where possible - really challenge your Sass skills. Create your own mixins, functions, extends, etc
+-Responsiveness: make it look good on every viewport. Try to have elements fill as much of the page as possible while being contained within the viewport height and width
+-Standards compliant -- w3c etc
+-Works on all browsers or has fallbacks
+-Install Modernizer
+
+-Add a "Practice" page that lists app features, css animations, tutorials, codepen, dribbble,  --- small things with a short description
+
+-widen boxes for mobile
+-mobile: always show title and description since users cant hover
+-Mobile: add spaces between boxes
+-overlay pics of work peices with a color layer- style them in PS
