@@ -331,4 +331,6 @@ module.exports = function (grunt) {
     'build'
   ]);
 
+  grunt.loadNpmTasks('grunt-wiredep');
+
 };
