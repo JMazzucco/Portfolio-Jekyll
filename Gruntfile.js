@@ -234,8 +234,8 @@ module.exports = function (grunt) {
 
         options: {
           loadPath: [
-            'bower_components/bourbon',
-            'bower_components/neat/app/assets/stylesheets'
+            '<%= yeoman.app %>/bower_components/bourbon/app/assets/stylesheets',
+            '<%= yeoman.app %>/bower_components/neat/app/assets/stylesheets'
           ]
         }
       }
