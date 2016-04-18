@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 
   // Automatically load required Grunt tasks
   require('jit-grunt')(grunt, {
-    useminPrepare: 'grunt-usemin'
+    // useminPrepare: 'grunt-usemin'
   });
 
   // configurable paths
@@ -33,7 +33,7 @@ module.exports = function (grunt) {
     yeoman: yeomanConfig,
     watch: {
       styles: {
-        files: ['<%= config.app %>/sass/{,*/}*.scss'],
+        files: ['<%= yeoman.app %>/sass/{,*/}*.scss'],
         tasks: ['sass', 'newer:copy:styles', 'autoprefixer']
       },
       options: {
@@ -142,19 +142,6 @@ module.exports = function (grunt) {
     /*uglify: {
       dist: {}
     },*/
-    useminPrepare: {
-      html: '<%= yeoman.app %>/index.html',
-      options: {
-        dest: '<%= yeoman.dist %>'
-      }
-    },
-    usemin: {
-      html: ['<%= yeoman.dist %>/{,*/}*.html'],
-      css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
-      options: {
-        dirs: ['<%= yeoman.dist %>']
-      }
-    },
     imagemin: {
       dist: {
         files: [{
@@ -238,15 +225,15 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= config.app %>/sass',
+          cwd: '<%= yeoman.app %>/sass',
           src: ['*.scss'],
-          dest: '<%= config.app %>/styles',
+          dest: '<%= yeoman.app %>/styles',
           ext: '.css'
         }],
 
         options: {
           loadPath: [
-            'bower_components/bourbon/dist',
+            'bower_components/bourbon',
             'bower_components/neat/app/assets/stylesheets'
           ]
         }
@@ -334,7 +321,6 @@ module.exports = function (grunt) {
     'clean:dist',
     'createDefaultTemplate',
     'jst',
-    'useminPrepare',
     'sass',
     'imagemin',
     'htmlmin',
@@ -342,8 +328,7 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'copy',
-    'rev',
-    'usemin'
+    'rev'
   ]);
 
   grunt.registerTask('default', [
