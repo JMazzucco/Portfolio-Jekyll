@@ -319,15 +319,14 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', [
+    // Add Uglify and Concat
     'clean:dist',
     'createDefaultTemplate',
     'jst',
     'sass',
     'imagemin',
     'htmlmin',
-    'concat',
     'cssmin',
-    'uglify',
     'copy',
     'rev'
   ]);
