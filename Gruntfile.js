@@ -52,7 +52,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
           '<%= yeoman.app %>/scripts/templates/*.{ejs,mustache,hbs}',
           'test/spec/**/*.js'
-        ]
+        ],
       },
       jst: {
         files: [
@@ -63,7 +63,9 @@ module.exports = function (grunt) {
       test: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.js', 'test/spec/**/*.js'],
         tasks: ['test:true']
-      }
+      },
+      files: ['bower_components/*'],
+      tasks: ['wiredep']
     },
     connect: {
       options: {
@@ -246,9 +248,10 @@ module.exports = function (grunt) {
         // Point to the files that should be updated when
         // you run `grunt wiredep`
         src: [
+          'app/*.html',
           'app/views/**/*.html',   // .html support...
           'app/views/**/*.jade',   // .jade support...
-          'app/styles/main.scss',  // .scss & .sass support...
+          'app/sass/main.scss',  // .scss & .sass support...
           'app/config.yml'         // and .yml & .yaml support out of the box!
         ],
 
@@ -333,10 +336,12 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'jshint',
+    'wiredep',
     'test',
     'build'
   ]);
 
   grunt.loadNpmTasks('grunt-wiredep');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
 };
