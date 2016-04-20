@@ -21,7 +21,6 @@ module.exports = function (grunt) {
 
   // Automatically load required Grunt tasks
   require('jit-grunt')(grunt, {
-    // useminPrepare: 'grunt-usemin'
   });
 
   // configurable paths
@@ -31,6 +30,7 @@ module.exports = function (grunt) {
   };
 
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     yeoman: yeomanConfig,
     watch: {
       styles: {
@@ -139,12 +139,22 @@ module.exports = function (grunt) {
         }
       }
     },
-    // not enabled since usemin task does concat and uglify
-    // check index.html to edit your build targets
-    // enable this task if you prefer defining your build targets here
-    /*uglify: {
-      dist: {}
-    },*/
+    concat: {
+      options: {
+        separator: ';'
+      },
+      dist: {
+        src: ['<%= yeoman.app %>/scripts/*.js'],
+        dest: '<%= yeoman.dist %>/scripts/main-built.js'
+      }
+    },
+    uglify: {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/scripts/main.min.js': ['<%= yeoman.dist %>/scripts/main-built.js']
+        }
+      }
+    },
     imagemin: {
       dist: {
         files: [{
@@ -322,7 +332,6 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', [
-    // Add Uglify and Concat
     'clean:dist',
     'createDefaultTemplate',
     'jst',
@@ -330,18 +339,23 @@ module.exports = function (grunt) {
     'imagemin',
     'htmlmin',
     'cssmin',
+    'concat',
+    'uglify',
+    'wiredep',
     'copy',
     'rev'
   ]);
 
   grunt.registerTask('default', [
     'jshint',
-    'wiredep',
     'test',
-    'build'
+    'build',
+    'watch'
   ]);
 
-  grunt.loadNpmTasks('grunt-wiredep');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
 };
