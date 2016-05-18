@@ -1,11 +1,14 @@
 // In `app/sass/main.scss`
 @import 'bourbon';
+$visual-grid: true;
 @import 'neat';
 
 // Other imports and styles go here
 
+$main-color: #444;
+
 body {
-    background: #fafafa;
+    background: $main-color;
 }
 
 .hero-unit {

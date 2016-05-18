@@ -87,6 +87,7 @@ module.exports = function (grunt) {
       test: {
         options: {
           port: 9001,
+          keepalive: false,
           middleware: function (connect) {
             return [
               mountFolder(connect, 'test'),
@@ -349,8 +350,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'jshint',
     'test',
-    'build',
-    'watch'
+    'build'
   ]);
 
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -359,3 +359,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
 };
+
+

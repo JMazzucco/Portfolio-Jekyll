@@ -1,1 +1,1 @@
-console.log('aya')
+console.log('aya');
