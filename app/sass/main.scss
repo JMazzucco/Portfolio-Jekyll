@@ -2,16 +2,226 @@
 @import 'bourbon';
 $visual-grid: true;
 @import 'neat';
+$fa-font-path: "../bower_components/components-font-awesome/fonts";
 
 // Other imports and styles go here
 
-$main-color: #444;
+/**
+ * Reset some basic elements
+ */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 
+
+/**
+ * Basic styling
+ */
 body {
-    background: $main-color;
+    background: linear-gradient(35deg, #fff 40%, rgba(242,246,248,1) 40%);
+    min-height: 100vh;
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $text-color;
+    // background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $base-font-weight;
+
+}
+
+h1, h2 {
+    color: $header-font-color;
+}
+
+
+h3, h4, h5, h6 {
+    color: rgb(126, 126, 126);
+}
+
+
+hr {
+    margin-left: 2px;
+    width: 40px;
+    border: 0;
+    border-top: 3px solid #E0E0E0;
+
+}
+
+/**
+ * Links
+ */
+a {
+    color: $brand-color;
+    text-decoration: none;
+
+    &:visited {
+        color: darken($brand-color, 15%);
+    }
+
+    &:hover {
+        color: $text-color;
+        text-decoration: underline;
+    }
+}
+
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+    // max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    // max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    // margin-right: auto;
+    // margin-left: auto;
+    // padding-right: $spacing-unit;
+    // padding-left: $spacing-unit;
+    @extend %clearfix;
+
+    // @include media-query($on-laptop) {
+    //     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    //     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    //     padding-right: $spacing-unit / 2;
+    //     padding-left: $spacing-unit / 2;
+    // }
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
 }
